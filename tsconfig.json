@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "outDir": "dist",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "noEmit": true,
+    "incremental": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "baseUrl": ".",                           // ✅ اضافه شد
+    "paths": {
+      "@/*": ["./*"]                          // ✅ اضافه شد
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "ts-node": {
+    "esm": true
+  },
+  "include": [
+    "server.mts",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

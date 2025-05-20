@@ -1,0 +1,41 @@
+{
+  "name": "ecommercewebsite",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "dev:socket": "cross-env NODE_OPTIONS=--loader=ts-node/esm ts-node server.mts",
+    "build": "next build",
+    "build:socket":"next build && tsc --project tsconfig.server.json",
+    "start": "next start",
+    "start:socket":"NODE_ENV=production node dist/server.mjs",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.2.2",
+    "class-variance-authority": "^0.7.1",
+    "lucide-react": "^0.511.0",
+    "next": "15.3.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1",
+    "stripe": "^18.1.0",
+    "tailwind-variants": "^1.0.0",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@types/node": "^20.17.48",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "autoprefixer": "^10.4.21",
+    "cross-env": "^7.0.3",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.2",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
